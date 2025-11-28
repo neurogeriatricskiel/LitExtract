@@ -69,7 +69,7 @@ for method in methods:
     method_colors[method] = (r_new, g_new, b_new)
 
 # Plot 
-fig_width = max(22, len(pivot) * 0.25)
+fig_width = max(24, len(pivot) * 0.25)
 fig_height = 15
 plt.figure(figsize=(fig_width, fig_height), dpi=600)
 
@@ -80,7 +80,7 @@ for method in pivot.columns:
         pivot[method],
         bottom=bottoms,
         color=method_colors[method],
-        width=0.8
+        width=0.9
     )
     bottoms += pivot[method].values
 
@@ -89,7 +89,7 @@ plt.ylabel("Artifact Rejection Methods used (n per study)", fontsize=22, weight=
 plt.title("Artifact Rejection Methods Across Studies", fontsize=26, weight="bold", pad=15)
 
 # Rotate x-axis labels
-plt.xticks(rotation=55, ha='right', fontsize=19)
+plt.xticks(rotation=55, ha='right', fontsize=20)
 plt.yticks(fontsize=22)
 
 plt.grid(axis="y", linestyle="--", alpha=0.4)
