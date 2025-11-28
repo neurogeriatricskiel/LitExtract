@@ -5,15 +5,15 @@ from utils.config import dir_data, dir_plots
 from itertools import product
 
 # Load data
-data_path = dir_data / "20251003_Elicitrevised.csv"
-save_path = dir_plots / "fig2_eeg_gait_heatmap.png"
+data_path = dir_data / "20251128_Elicitrevised.csv"
+save_path = dir_plots / "fig2_eeg_gait_heatmap_pub.png"
 df = pd.read_csv(data_path, sep=";")
 print(f"Loaded {len(df)} studies from {data_path.name}\n")
 
-# Clean column names
+# Clean column names 
 df.rename(columns=lambda x: x.strip().replace(" ", "_"), inplace=True)
 
-# Explode multi-value columns using Cartesian product 
+# Explode multi-value columns
 rows = []
 for _, row in df.iterrows():
     eeg_types = [e.strip() for e in str(row.get("Type_of_EEG_electrodes", "")).split(";") if e.strip()]
@@ -29,24 +29,33 @@ heat_data = df_expanded.groupby(
 ).size().unstack(fill_value=0)
 
 # Plot heatmap
-plt.figure(figsize=(10, 6))
+plt.figure(figsize=(16, 9)) 
 sns.heatmap(
     heat_data,
     annot=True,
     fmt="d",
-    cmap="OrRd", 
-    linewidths=0.5,
+    cmap="OrRd",         
+    linewidths=1.0,
     linecolor="gray",
-    cbar=False
+    cbar=False,
+    annot_kws={"size": 20, "weight": "bold"} 
 )
-plt.title("EEG Electrode Types vs Gait Measurement Systems", fontsize=16, weight='bold')
-plt.ylabel("Type of EEG Electrodes", fontsize=12)
-plt.xlabel("Gait Measurement System", fontsize=12)
-plt.xticks(rotation=30, ha="right", fontsize=10)
-plt.yticks(fontsize=10)
+
+# Titles and labels
+plt.title(
+    "EEG Electrode Types vs Gait Measurement Systems",
+    fontsize=24,
+    weight='bold',
+    pad=20
+)
+plt.ylabel("Type of EEG Electrodes", fontsize=20, weight='bold')
+plt.xlabel("Gait Measurement System", fontsize=20, weight='bold')
+plt.xticks(fontsize=18)
+plt.yticks(fontsize=18)
 plt.tight_layout()
 plt.savefig(save_path, dpi=600, bbox_inches="tight")
 plt.show()
+print(f"High-resolution heatmap saved to: {save_path}")
 
 # Descriptive statistics
 print("Number of studies per EEG electrode type:")
