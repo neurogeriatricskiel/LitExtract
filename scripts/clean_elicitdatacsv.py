@@ -5,7 +5,7 @@ from utils.config import dir_data, dir_cleancsv
 from utils.cleandata import split_and_clean, make_citations_unique  # import new function
 
 # --- Load data ---
-data_path = dir_data / "20251003_Elicitrevised.csv"
+data_path = dir_data / "20251128_Elicitrevised.csv"
 df = pd.read_csv(data_path, sep=";")
 print(f"Loaded {len(df)} records from {data_path.name}")
 
