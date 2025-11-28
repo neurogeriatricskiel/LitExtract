@@ -61,14 +61,6 @@ Frequency-dependent modulation of neural oscillations across the gait cycle,"Zha
 Frequency-dependent modulation of neural oscillations across the gait cycle,"Zhao, M., et al., 2022",IC decomposition
 Frequency-dependent modulation of neural oscillations across the gait cycle,"Zhao, M., et al., 2022",IC rejection
 Frequency-dependent modulation of neural oscillations across the gait cycle,"Zhao, M., et al., 2022",Re-reference
-Motor imagery ability scores are related to cortical activation during gait imagery,"Putzolu, M., et al., 2024",Raw data
-Motor imagery ability scores are related to cortical activation during gait imagery,"Putzolu, M., et al., 2024",Bad channel detection
-Motor imagery ability scores are related to cortical activation during gait imagery,"Putzolu, M., et al., 2024",Artifact Rejection
-Motor imagery ability scores are related to cortical activation during gait imagery,"Putzolu, M., et al., 2024",Bandpass filter
-Motor imagery ability scores are related to cortical activation during gait imagery,"Putzolu, M., et al., 2024",IC decomposition
-Motor imagery ability scores are related to cortical activation during gait imagery,"Putzolu, M., et al., 2024",IC rejection
-Motor imagery ability scores are related to cortical activation during gait imagery,"Putzolu, M., et al., 2024",Despiking
-Motor imagery ability scores are related to cortical activation during gait imagery,"Putzolu, M., et al., 2024",Re-reference
 Auditory Cue Effects on Gait-Phase-Dependent Electroencephalogram (EEG) Modulations during Overground and Treadmill Walking,"Tharawadeepimu, K., et al., 2024",Raw data
 Auditory Cue Effects on Gait-Phase-Dependent Electroencephalogram (EEG) Modulations during Overground and Treadmill Walking,"Tharawadeepimu, K., et al., 2024",Bandpass filter
 Auditory Cue Effects on Gait-Phase-Dependent Electroencephalogram (EEG) Modulations during Overground and Treadmill Walking,"Tharawadeepimu, K., et al., 2024",Notch filter
@@ -83,13 +75,6 @@ Association between gait speed deterioration and EEG abnormalities,"Garcı´a-Ag
 "Brain Networks Modulation during Simple and Complex Gait: A ""Mobile Brain/Body Imaging"" Study","Bonassi, G., et al., 2024",Channel removal
 "Brain Networks Modulation during Simple and Complex Gait: A ""Mobile Brain/Body Imaging"" Study","Bonassi, G., et al., 2024",Bandpass filter
 "Brain Networks Modulation during Simple and Complex Gait: A ""Mobile Brain/Body Imaging"" Study","Bonassi, G., et al., 2024",Artifact Rejection
-Neural oscillations during motor imagery of complex gait: an HdEEG study,"Putzolu, M., et al., 2022",Raw data
-Neural oscillations during motor imagery of complex gait: an HdEEG study,"Putzolu, M., et al., 2022",Bad channel detection
-Neural oscillations during motor imagery of complex gait: an HdEEG study,"Putzolu, M., et al., 2022",Artifact Rejection
-Neural oscillations during motor imagery of complex gait: an HdEEG study,"Putzolu, M., et al., 2022",Bandpass filter
-Neural oscillations during motor imagery of complex gait: an HdEEG study,"Putzolu, M., et al., 2022",IC decomposition
-Neural oscillations during motor imagery of complex gait: an HdEEG study,"Putzolu, M., et al., 2022",IC rejection
-Neural oscillations during motor imagery of complex gait: an HdEEG study,"Putzolu, M., et al., 2022",Re-reference
 Brain Activity Response to Visual Cues for Gait Impairment in Parkinson's Disease: An EEG Study,"Stuart, S., et al., 2021",Raw data
 Brain Activity Response to Visual Cues for Gait Impairment in Parkinson's Disease: An EEG Study,"Stuart, S., et al., 2021",Downsample
 Brain Activity Response to Visual Cues for Gait Impairment in Parkinson's Disease: An EEG Study,"Stuart, S., et al., 2021",Bandpass filter
