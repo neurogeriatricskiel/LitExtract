@@ -38,13 +38,13 @@ sns.heatmap(
     linewidths=1.0,
     linecolor="gray",
     cbar=False,
-    annot_kws={"size": 20, "weight": "bold"} 
+    annot_kws={"size": 26, "weight": "bold"} 
 )
 
 # Titles and labels
 plt.title(
     "EEG Electrode Types vs Gait Measurement Systems",
-    fontsize=24,
+    fontsize=26,
     weight='bold',
     pad=20
 )
