@@ -9,7 +9,7 @@ from utils.config import dir_cleancsv, dir_plots
 
 # Load data
 data_path = os.path.join(dir_cleancsv, "Artifact_Methods_cleaned.csv")
-save_path = dir_plots / "fig5_artifactrej.png"
+save_path = dir_plots / "fig4_artifactrej.png"
 df_artifact = pd.read_csv(data_path)
 
 # Fill missing citation and strip whitespace
