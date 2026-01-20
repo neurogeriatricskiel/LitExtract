@@ -7,6 +7,9 @@ import seaborn as sns
 import colorsys
 from utils.config import dir_cleancsv, dir_plots
 
+# Set sans-serif as default font
+plt.rcParams['font.family'] = 'sans-serif'
+
 # Load data
 data_path = os.path.join(dir_cleancsv, "Artifact_Methods_cleaned.csv")
 save_path = dir_plots / "fig4_artifactrej.png"
@@ -53,20 +56,8 @@ print(f"\nAverage number of methods per study: {avg_methods_per_study:.2f}")
 print(f"Number of studies using multiple methods: {multi_method_studies}")
 
 # Assign colors
-palette_base = sns.color_palette("tab20", n_colors=len(methods))
-method_base_colors = {method: palette_base[i % len(palette_base)] for i, method in enumerate(methods)}
-
-# Map frequency to intensity (darker = more common)
-max_count = method_counts.max()
-method_colors = {}
-min_light, max_light = 0.3, 0.9
-for method in methods:
-    r, g, b = method_base_colors[method]
-    h, l, s = colorsys.rgb_to_hls(r, g, b)
-    freq = method_counts.get(method, 0)
-    l_new = max_light - (freq / max_count) * (max_light - min_light)
-    r_new, g_new, b_new = colorsys.hls_to_rgb(h, l_new, s)
-    method_colors[method] = (r_new, g_new, b_new)
+palette = sns.color_palette("plasma", n_colors=len(methods))
+method_colors = {method: palette[i % len(palette)] for i, method in enumerate(methods)}
 
 # Plot 
 fig_width = max(24, len(pivot) * 0.25)
@@ -85,8 +76,7 @@ for method in pivot.columns:
     bottoms += pivot[method].values
 
 plt.xlabel("Studies", fontsize=22, weight="bold")
-plt.ylabel("Artifact Rejection Methods used (n per study)", fontsize=22, weight="bold")
-plt.title("Artifact Rejection Methods Across Studies", fontsize=26, weight="bold", pad=15)
+plt.ylabel("Artifact Rejection Methods used per study", fontsize=22, weight="bold")
 
 # Rotate x-axis labels
 plt.xticks(rotation=55, ha='right', fontsize=20)
